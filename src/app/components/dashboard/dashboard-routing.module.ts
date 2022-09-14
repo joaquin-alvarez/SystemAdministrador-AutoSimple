@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from '../home/home.component';
+import { TestComponent } from '../test/test.component';
 import { DashboardComponent } from './dashboard.component';
 
 const routes: Routes = [
@@ -10,6 +11,7 @@ const routes: Routes = [
     { path: 'vehiculos', loadChildren: () => import('../vehicules/vehicules.module').then(m => m.VehiculesModule) },
     { path: 'clientes', loadChildren: () => import('../clients/clients.module').then(m => m.ClientsModule) },
     { path: 'consultas', loadChildren: () => import('../messages/messages.module').then(m => m.MessagesModule) },
+    { path: 'test', component: TestComponent, pathMatch: 'full' }//test route matching test component
   ] },
 ];
 

@@ -11,12 +11,14 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
+    HttpClientModule,
     MatProgressSpinnerModule,
     MatFormFieldModule,
     MatInputModule,
@@ -30,6 +32,7 @@ import { MatListModule } from '@angular/material/list';
     MatListModule,
   ],
   exports: [
+    HttpClientModule,
     MatProgressSpinnerModule,
     MatFormFieldModule,
     MatInputModule,

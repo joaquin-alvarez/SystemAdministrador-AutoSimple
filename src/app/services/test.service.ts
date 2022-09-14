@@ -6,11 +6,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class TestService {
+  TestRecived : String
 
   constructor(private http: HttpClient) { }
 
-  getTestJSON(page? : number) : Observable<any>{
-    const URL = 'https://BASE_ENDPOINT' + page
+  getTestJSON() : Observable<any>{
+    const URL = 'https://rickandmortyapi.com/api/character?=page'
     return this.http.get(URL)
   }
 }
